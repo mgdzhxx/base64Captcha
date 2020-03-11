@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/go-redis/redis"
-	"github.com/mojocn/base64Captcha"
+	"github.com/mgdzhxx/base64Captcha"
 )
 
 // customizeRdsStore An object implementing Store interface
