@@ -75,6 +75,9 @@ func RandColor() color.RGBA {
 }
 
 func randIntRange(from, to int) int {
+	if to <= from {
+		to = from + 1
+	}
 	return rand.Intn(to-from) + from
 }
 func randFloat64Range(from, to float64) float64 {

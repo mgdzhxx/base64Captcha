@@ -38,9 +38,15 @@ func NewItemDigit(width int, height int, dotCount int, maxSkew float64) *ItemDig
 }
 
 func createRandPaletteColors(dotCount int) color.Palette {
+	if dotCount < 0 {
+		dotCount = 0
+	}
 	p := make([]color.Color, dotCount+1)
 	// Transparent color.
 	p[0] = color.RGBA{0xFF, 0xFF, 0xFF, 0x00}
+	if dotCount <= 1 {
+		return p
+	}
 	// Primary color.
 	prim := color.RGBA{
 		uint8(rand.Intn(129)),

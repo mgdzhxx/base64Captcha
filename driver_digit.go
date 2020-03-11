@@ -63,6 +63,12 @@ func (d *DriverDigit) DrawCaptcha(content string) (item Item, err error) {
 	} else {
 		border = d.Width / 5
 	}
+	if maxx <= border*2 {
+		maxx = border*2 + 1
+	}
+	if maxy <= border*2 {
+		maxy = border*2 + 1
+	}
 	x := rand.Intn(maxx-border*2) + border
 	y := rand.Intn(maxy-border*2) + border
 	// Draw digits.
