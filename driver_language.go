@@ -2,9 +2,10 @@ package base64Captcha
 
 import (
 	"fmt"
-	"github.com/golang/freetype/truetype"
 	"image/color"
 	"math/rand"
+
+	"github.com/golang/freetype/truetype"
 )
 
 //https://en.wikipedia.org/wiki/Unicode_block
